@@ -24,9 +24,6 @@ Color.isColor = function(rgb);
   }
 };
 
-Color.redIntensity = function(rgb){
-
-};
 
 //redIntensity
 color.redIntensity = function(rgb)
@@ -51,6 +48,31 @@ color.blue_intensity = function(rgb)
 }
 
 //brightness
-
+color.brightness = function(rgb)
+{
+  let bright = (rgb[0] + rgb[1] + rgb[2]) / 3;
+  return bright;
+}
 
 //complement
+color.complement = function(rgb)
+{
+  let comp = [];
+
+  for (var i = 0; i < 3; 1++)
+  {
+    comp.push(rgb[i]);
+  }
+
+  return comp;
+
+}
+
+//grey scale
+color.grey_scale = function(rgb)
+{
+  let grey_level = (rgb[0] + rgb[1] + rgb[2]) / 3;
+  let grey_array = (grey_level, grey_level, grey_level);
+
+  return grey_array;
+}
